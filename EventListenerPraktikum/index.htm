@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="judul" >aku belum berubah</h1>
+    <button id="btnUbah">Ubah Teks</button>
+    <button id="btnWarna">Ubah Warna</button>
+    <button id="btnSize">Ubah Ukuran</button>
+    <button id="btnReset">Reset</button>
+
+    <script>
+        const judul = document.getElementById('judul');
+        const btnUbah = document.getElementById('btnUbah');
+        const btnWarna = document.getElementById('btnWarna');
+        const btnSize = document.getElementById('btnSize');
+        const btnReset = document.getElementById('btnReset');
+
+        btnUbah.addEventListener('click', () => {
+            judul.textContent = 'Aku sudah berubah!' ;
+        });
+
+        btnWarna.addEventListener('click', () => {
+            judul.style.color = 'red';
+        } );
+
+        btnSize.addEventListener('click', () => {
+            judul.style.fontSize = '50px' ;
+        });
+
+        btnReset.addEventListener('click', () => {
+            judul.textContent = 'aku belum berubah';
+            judul.style.color = '';
+            judul.style.fontSize = '';
+        });
+//(parameter) => {argumen}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;text-align: center;margin-top: 50px;}
+        button {font-size: 20px; padding: 10px 20px; margin: 5px;}
+        #angka {font-size: 64px;}
+    </style>
+</head>
+<body>
+    <h2>Counter</h2>
+    <div id="angka">0</div>
+    <button id="tambah">+</button>
+    <button id="kurang">-</button>
+    <button id="reset">reset</button>
+
+    <script>
+        let hitung = 0;
+        const angka = document.getElementById('angka');
+
+        document.getElementById('tambah').addEventListener('click', () => {
+                hitung++;
+                angka.textContent = hitung;
+            });
+
+            document.getElementById('kurang').addEventListener('click', () => {
+
+                if (hitung <= 0) {
+                    angka.textContent = 'Angka tidak boleh kurang dari 0';
+                } else {
+                    hitung--;
+                    angka.textContent = hitung;
+                }
+            });
+
+            document.getElementById('reset').addEventListener('click', () => {
+                hitung = 0;
+                angka.textContent = hitung;
+            });
+
+
+    </script>
+
+</body>
+</html>
