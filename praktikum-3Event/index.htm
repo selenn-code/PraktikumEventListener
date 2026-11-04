@@ -6,11 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        const teks = document.createElement("p");
-        teks.innerText = 'ini text';
 
-        document.body.appendChild(teks);
+    <h1>Daftar Belanja</h1>
+    <input id="input" placeholder="Masukkan empruy">
+    <button id="submit" type="submit">done ia</button>
+    <button id="reset" type="reset">clear</button>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        const input = document.getElementById('input');
+        const submit = document.getElementById('submit');
+        const reset = document.getElementById('reset');
+        const li = document.getElementById('list')
+        
+
+        submit.addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.textContent = input.value; 
+            list.appendChild(li);
+        });
+
+        reset.addEventListener('click', () => {
+            li.remove();
+        })
     </script>
 </body>
 </html>
